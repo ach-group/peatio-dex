@@ -4,7 +4,7 @@ GIT
   specs:
     mina-slack (0.0.3)
       mina (~> 0.3.0)
-      rest-client (~> 1.6.7)
+      rest-client (>= 1.8.0)
 
 GIT
   remote: git://github.com/git37/unread.git
@@ -315,7 +315,7 @@ GEM
     redis-store (1.1.4)
       redis (>= 2.2)
     request_store (1.1.0)
-    rest-client (1.6.8)
+    rest-client (>= 1.8.0)
       mime-types (~> 1.16)
       rdoc (>= 2.4.2)
     rotp (1.6.1)
@@ -477,7 +477,7 @@ DEPENDENCIES
   rails-observers
   rbtree
   redis-rails
-  rest-client (~> 1.6.8)
+  rest-client (>= 1.8.0)
   rotp
   rspec-rails
   sass-rails
