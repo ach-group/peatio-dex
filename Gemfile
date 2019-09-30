@@ -12,8 +12,8 @@ gem 'json'
 gem 'jbuilder'
 gem 'bcrypt-ruby', '~> 3.1.2'
 
-gem 'doorkeeper', '~> 1.4.1'
-gem 'omniauth', '~> 1.2.1'
+gem "doorkeeper", ">= 4.2.0"
+gem "omniauth", ">= 1.3.2"
 gem 'omniauth-identity', '~> 1.1.1'
 
 gem 'figaro'
@@ -48,7 +48,7 @@ gem 'coffee-rails'
 gem 'uglifier'
 gem "jquery-rails"
 gem "angularjs-rails"
-gem 'bootstrap-sass', '~> 3.2.0.2'
+gem 'bootstrap-sass', '~> 3.2.0.4'
 gem 'bootstrap-wysihtml5-rails'
 gem 'font-awesome-sass'
 gem 'bourbon'
@@ -58,7 +58,7 @@ gem 'browser', '~> 0.8.0'
 gem 'rbtree'
 gem 'liability-proof', '0.0.9'
 gem 'whenever', '~> 0.9.2'
-gem 'grape', '~> 0.7.0'
+gem "grape", ">= 1.1.0"
 gem 'grape-entity', '~> 0.4.2'
 gem 'grape-swagger', '~> 0.7.2'
 gem 'rack-attack', '~> 3.0.0'
@@ -68,7 +68,7 @@ gem 'twilio-ruby', '~> 5.7.2'
 gem 'unread', github: 'git37/unread'
 gem 'carrierwave', '~> 0.10.0'
 gem 'simple_captcha2', require: 'simple_captcha'
-gem 'rest-client', '~> 1.6.8'
+gem "rest-client", ">= 1.8.0"
 
 group :development, :test do
   gem 'factory_girl_rails'
