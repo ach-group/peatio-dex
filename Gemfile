@@ -48,7 +48,7 @@ gem 'coffee-rails'
 gem 'uglifier'
 gem "jquery-rails"
 gem "angularjs-rails"
-gem 'bootstrap-sass', '~> 3.2.0.4'
+gem "bootstrap-sass", ">= 3.4.1"
 gem 'bootstrap-wysihtml5-rails'
 gem 'font-awesome-sass'
 gem 'bourbon'
@@ -68,7 +68,7 @@ gem 'twilio-ruby', '~> 5.7.2'
 gem 'unread', github: 'git37/unread'
 gem 'carrierwave', '~> 0.10.0'
 gem 'simple_captcha2', require: 'simple_captcha'
-gem "rest-client", ">= 1.8.0"
+gem "rest-client", ">= 1.6.7"
 
 group :development, :test do
   gem 'factory_girl_rails'
