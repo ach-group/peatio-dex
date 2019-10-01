@@ -13,11 +13,12 @@ gem 'jbuilder'
 gem 'bcrypt-ruby', '~> 3.1.2'
 
 gem 'doorkeeper', '~> 5.0.2'
-gem 'omniauth', '~> 1.2.2'
+gem 'omniauth', '~> 1.9.0'
 gem 'omniauth-identity', '~> 1.1.1'
 
 gem 'figaro'
 gem 'hashie'
+gem 'capybara', '~> 3.1.1'
 
 gem 'aasm', '~> 3.4.0'
 gem 'amqp', '~> 1.3.0'
