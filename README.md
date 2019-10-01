@@ -138,7 +138,6 @@ currencies.**
 
 **Bitcoin** address [1EvTEyVBsYoDS85h3ypijJEjW2vX9Nsv8P](https://blockchain.info/address/38jUu1ksNs9d9aFCK8wMPrZtkqDzJjFe5E)
 
-
 ### What is Peatio?
 
 [Peatio](http://en.wikipedia.org/wiki/Pixiu) (Chinese: 貔貅) is a Chinese mythical hybrid creature considered to be a very powerful protector to practitioners of Feng Shui.
