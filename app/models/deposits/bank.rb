@@ -5,7 +5,7 @@ module Deposits
     include ::FundSourceable
 
     def charge!(txid)
-      with_lock if
+      with_lock do
         submit!
         accept!
         touch(:done_at)
