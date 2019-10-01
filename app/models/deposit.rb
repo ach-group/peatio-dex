@@ -126,6 +126,11 @@ class Deposit < ActiveRecord::Base
       end
     end
 
+  else 
+    def do
+    account.lock!.plus_funds amount, reason: Account::DEPOSIT, ref: self
+  end
+
   end
 
   def send_mail
