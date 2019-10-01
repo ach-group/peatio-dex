@@ -104,6 +104,11 @@ class Deposit < ActiveRecord::Base
   def do
     #total_fee = self.staking_fee * amount
     account.lock!.plus_funds amount, fee: total_fee, reason: Account::DEPOSIT, ref: self
+  end
+
+  def staking
+    total_fee = self.staking_fee * amount
+    account.lock!.plus_funds amount, fee: total_fee, reason: Account::DEPOSIT, ref: self
 
     if self.staking
       # Take staking fee and send some to admin account
@@ -125,7 +130,6 @@ class Deposit < ActiveRecord::Base
         fee_transaction_referrer.save!
       end
     end
-
   end
 
   def send_mail
