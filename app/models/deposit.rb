@@ -103,7 +103,7 @@ class Deposit < ActiveRecord::Base
 
   def do
     #total_fee = self.staking_fee * amount
-    account.lock!.plus_funds amount, fee: total_fee, reason: Account::DEPOSIT, ref: self
+    account.lock!.plus_funds amount, fee: total_fee, reason: Account::DEPOSIT, ref: self 
   end
 
   def staking
