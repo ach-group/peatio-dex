@@ -104,8 +104,8 @@ class Deposit < ActiveRecord::Base
   def do
     account.lock!.plus_funds amount, reason: Account::DEPOSIT, ref: self
 
-    def coinable = self.coin? 
-    total_fee = self.staking_fee * amount do
+    if coinable = self.coin? 
+    total_fee = self.staking_fee * amount
     account.lock!.plus_funds amount, fee: total_fee, reason: Account::DEPOSIT, ref: self
 
       if self.staking
