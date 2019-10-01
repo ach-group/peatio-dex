@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/git37/mina-slack.git
+  remote: git://github.com/InfraexDev/mina-slack.git
   revision: 5b7571a34f1979784720c0bfef555591e89ca3a7
   specs:
     mina-slack (0.0.3)
@@ -7,7 +7,7 @@ GIT
       rest-client (~> 1.6.7)
 
 GIT
-  remote: git://github.com/git37/unread.git
+  remote: git://github.com/InfraexDev/unread.git
   revision: b8fa0502e9558c93388a104bcbe20376cf43027d
   specs:
     unread (0.4.0)
@@ -26,7 +26,7 @@ GEM
       erubis (~> 2.7.0)
       rack (~> 1.5.2)
       rack-test (~> 0.6.2)
-    active_hash (2.0.0)
+    active_hash (1.3.0)
       activesupport (>= 2.2.2)
     activemodel (4.0.12)
       activesupport (= 4.0.12)
@@ -75,18 +75,21 @@ GEM
     builder (3.1.4)
     bunny (1.2.1)
       amq-protocol (>= 1.9.2)
+    byebug (2.7.0)
+      columnize (~> 0.3)
+      debugger-linecache (~> 1.2)
     callsite (0.0.11)
-    cancancan (~> 3.0.1)
-    capybara (3.1.1)
+    cancancan (1.7.1)
+    capybara (2.4.4)
       mime-types (>= 1.16)
-      nokogiri (>= 1.10.4)
+      nokogiri (>= 1.3.3)
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
     carrierwave (0.10.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
-      json (>= 2.2.0)
+      json (>= 1.7)
       mime-types (>= 1.16)
     childprocess (0.4.0)
       ffi (~> 1.0, >= 1.0.11)
@@ -102,6 +105,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
+    columnize (0.3.6)
     countries (0.9.3)
       currencies (~> 0.4.2)
     country_select (2.1.0)
@@ -115,10 +119,11 @@ GEM
     datagrid (1.0.5)
       rails (>= 3.0)
     debug_inspector (0.0.2)
+    debugger-linecache (1.2.0)
     descendants_tracker (0.0.3)
     diff-lcs (1.2.5)
-    doorkeeper (5.0.2)
-      railties (>= 4.2)
+    doorkeeper (1.4.1)
+      railties (>= 3.1)
     dotenv (0.9.0)
     dotenv-rails (0.9.0)
       dotenv (= 0.9.0)
@@ -134,7 +139,7 @@ GEM
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
-    enumerize (2.3.1)
+    enumerize (0.8.0)
       activesupport (>= 3.2)
     equalizer (0.0.9)
     erubis (2.7.0)
@@ -158,12 +163,12 @@ GEM
     globalize (4.0.0)
       activemodel (>= 4.0.0, < 5)
       activerecord (>= 4.0.0, < 5)
-    gon (5.2.3)
+    gon (5.2.0)
       actionpack (>= 2.3.0)
       json
       multi_json
       request_store (>= 1.0.5)
-    grape (1.2.4)
+    grape (0.7.0)
       activesupport
       builder
       hashie (>= 1.2.0)
@@ -197,7 +202,7 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.8.1)
     jwt (2.1.0)
-    kaminari (0.17.0)
+    kaminari (0.15.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kramdown (1.3.3)
@@ -223,7 +228,7 @@ GEM
       rake
     mini_portile (0.6.2)
     minitest (4.7.5)
-    mocha (1.9.0)
+    mocha (1.0.0)
       metaclass (~> 0.0.1)
     momentjs-rails (2.5.1)
       railties (>= 3.1)
@@ -233,21 +238,21 @@ GEM
     mysql2 (0.3.21)
     nokogiri (1.6.5)
       mini_portile (~> 0.6.0)
-    omniauth (1.9.0)
+    omniauth (1.2.2)
       hashie (>= 1.2, < 4)
       rack (~> 1.0)
     omniauth-identity (1.1.1)
       bcrypt-ruby (~> 3.0)
       omniauth (~> 1.0)
     open4 (1.3.0)
-    paper_trail (3.0.9)
-      activerecord (< 5.0, >= 3.0)
-      activesupport (< 5.0, >= 3.0)
+    paper_trail (3.0.1)
+      activerecord (>= 3.0, < 5.0)
+      activesupport (>= 3.0, < 5.0)
     paranoid2 (1.1.3)
       activerecord (>= 4.0.0.rc1)
     phonelib (0.3.5)
-    poltergeist (1.18.1)
-      capybara (< 4, >= 2.1)
+    poltergeist (1.5.1)
+      capybara (~> 2.1)
       cliver (~> 0.3.1)
       multi_json (~> 1.0)
       websocket-driver (>= 0.2.0)
@@ -256,7 +261,7 @@ GEM
       coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
-    pry-rails (0.3.9)
+    pry-rails (0.3.2)
       pry (>= 0.9.10)
     pusher (0.12.0)
       httpclient (~> 2.3.0)
@@ -315,7 +320,7 @@ GEM
     redis-store (1.1.4)
       redis (>= 2.2)
     request_store (1.1.0)
-    rest-client (1.6.7)
+    rest-client (1.6.8)
       mime-types (~> 1.16)
       rdoc (>= 2.4.2)
     rotp (1.6.1)
@@ -323,7 +328,7 @@ GEM
     rspec-expectations (2.14.5)
       diff-lcs (>= 1.1.3, < 2.0)
     rspec-mocks (2.14.5)
-    rspec-rails (3.8.2)
+    rspec-rails (2.14.1)
       actionpack (>= 3.0)
       activemodel (>= 3.0)
       activesupport (>= 3.0)
@@ -341,24 +346,24 @@ GEM
       sass (~> 3.2.0)
       sprockets (~> 2.8, <= 2.11.0)
       sprockets-rails (~> 2.0)
-    selenium-webdriver (3.141.0)
+    selenium-webdriver (2.39.0)
       childprocess (>= 0.2.5)
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
       websocket (~> 1.0.4)
-    shoulda-matchers (3.1.3)
-      activesupport (>= 4.0.0)
+    shoulda-matchers (2.5.0)
+      activesupport (>= 3.0.0)
     signature (0.1.7)
     simple_captcha2 (0.2.2)
       rails (>= 3.1, < 4.1)
-    simple_form (3.1.1)
+    simple_form (3.1.0)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
     slim (2.0.2)
       temple (~> 0.6.6)
       tilt (>= 1.3.3, < 2.1)
-    slim-rails (3.2.0)
-      actionpack (>= 3.1, < 4.1)
+    slim-rails (2.1.0)
+      actionpack (>= 3.0, < 4.1)
       activesupport (>= 3.0, < 4.1)
       railties (>= 3.0, < 4.1)
       slim (~> 2.0)
@@ -380,11 +385,11 @@ GEM
     thread_safe (0.1.3)
       atomic
     tilt (1.4.1)
-    timecop (0.9.1)
+    timecop (0.7.1)
     twilio-ruby (5.7.2)
       faraday (~> 0.9)
       jwt (>= 1.5, <= 2.5)
-      nokogiri (< 2.0, >= 1.6)
+      nokogiri (>= 1.6, < 2.0)
     tzinfo (0.3.42)
     uglifier (2.4.0)
       execjs (>= 0.3.0)
@@ -403,28 +408,27 @@ GEM
       chronic (>= 0.6.3)
     xpath (2.0.0)
       nokogiri (~> 1.3)
-    zeroclipboard-rails (0.1.2)
-      railties (>= 3.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   aasm (~> 3.4.0)
-  active_hash (~> 2.0.0)
+  active_hash
   acts-as-taggable-on
   amqp (~> 1.3.0)
   angularjs-rails
   bcrypt-ruby (~> 3.1.2)
   better_errors
   binding_of_caller
-  bootstrap-sass (~> 3.2.0.2)
+  bootstrap-sass (~> 3.2.0.4)
   bootstrap-wysihtml5-rails
   bourbon
   browser (~> 0.8.0)
   bunny (~> 1.2.1)
-  cancancan (~> 3.0.1)
-  capybara (~> 3.1.1)
+  byebug
+  cancancan
+  capybara
   carrierwave (~> 0.10.0)
   coffee-rails
   country_select (~> 2.1.0)
@@ -436,7 +440,7 @@ DEPENDENCIES
   easy_table
   eco
   em-websocket (~> 0.5.1)
-  enumerize (~> 2.3.1)
+  enumerize
   eventmachine (~> 1.0.4)
   factory_girl_rails
   faker (~> 1.4.3)
@@ -444,7 +448,7 @@ DEPENDENCIES
   font-awesome-sass
   globalize (~> 4.0.0)
   gon (~> 5.2.0)
-  grape (~> 1.2.4)
+  grape (~> 0.7.0)
   grape-entity (~> 0.4.2)
   grape-swagger (~> 0.7.2)
   hashie
@@ -462,12 +466,12 @@ DEPENDENCIES
   mocha
   momentjs-rails
   mysql2 (~> 0.3.21)
-  omniauth (~> 1.9.0)
+  omniauth (~> 1.2.1)
   omniauth-identity (~> 1.1.1)
-  paper_trail (~> 3.0.9)
+  paper_trail (~> 3.0.1)
   paranoid2
   phonelib (~> 0.3.5)
-  poltergeist (~> 1.18.1)
+  poltergeist
   pry-rails
   pusher
   quiet_assets
@@ -479,12 +483,12 @@ DEPENDENCIES
   redis-rails
   rest-client (~> 1.6.8)
   rotp
-  rspec-rails (~> 3.8.2)
+  rspec-rails
   sass-rails
   selenium-webdriver
-  shoulda-matchers (~> 3.1.3)
+  shoulda-matchers
   simple_captcha2
-  simple_form (~> 3.1.1)
+  simple_form (~> 3.1.0)
   slim-rails
   test-unit
   timecop
@@ -492,7 +496,6 @@ DEPENDENCIES
   uglifier
   unread!
   whenever (~> 0.9.2)
-  zeroclipboard-rails
 
 BUNDLED WITH
-   1.16.4
+   1.16.1
