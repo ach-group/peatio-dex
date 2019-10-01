@@ -1,3 +1,5 @@
+## PEATIO Dex
+
 An open-source crypto currency exchange
 =====================================
 
@@ -52,6 +54,8 @@ You must know what you're doing, there's no shortcut. Please get prepared before
 * Active community behind.
 * Free and open-source.
 * Created and maintained by [Peatio open-source group](http://peat.io).
+* New!! Include Affiliate Program under coin only (On Testng you must edit for working good)
+    * When Downline deposit coin Upline get comission
 
 
 ### Known Exchanges using Peatio
@@ -132,16 +136,13 @@ Peatio is released under the terms of the MIT license. See [http://peatio.mit-li
 **Every satoshi of your kind donation goes into the rerunning peatio again and making it active and adding support for new features and new 
 currencies.**
 
-**Bitcoin** address [38jUu1ksNs9d9aFCK8wMPrZtkqDzJjFe5E](https://blockchain.info/address/38jUu1ksNs9d9aFCK8wMPrZtkqDzJjFe5E)
-
-**Ethereum** address [38jUu1ksNs9d9aFCK8wMPrZtkqDzJjFe5E](https://etherscan.io/address/0x4ba2474e063aec44e23f2bf7fb9e4e2878dbab44)
+**Bitcoin** address [1EvTEyVBsYoDS85h3ypijJEjW2vX9Nsv8P](https://blockchain.info/address/38jUu1ksNs9d9aFCK8wMPrZtkqDzJjFe5E)
 
 
 ### What is Peatio?
 
 [Peatio](http://en.wikipedia.org/wiki/Pixiu) (Chinese: 貔貅) is a Chinese mythical hybrid creature considered to be a very powerful protector to practitioners of Feng Shui.
 
+for fueteres support please donate to wallet address:
 
-
-
-# peatio-dan
+# Peatio-dex

@@ -49,13 +49,13 @@ Installing [rbenv](https://github.com/sstephenson/rbenv) using a Installer
 
 Install Ruby through rbenv:
 
-    rbenv install 2.2.1
-    rbenv global 2.2.1
+    rbenv install 2.2.7
+    rbenv global 2.2.7
 
 Install bundler
 
     echo "gem: --no-ri --no-rdoc" > ~/.gemrc
-    gem install bundler
+    gem install bundler -v 1.16.1
     rbenv rehash
 
 ### 3. Install MySQL
@@ -91,7 +91,7 @@ Please follow instructions here: https://www.rabbitmq.com/install-debian.html
 
     mkdir -p ~/.bitcoin
     touch ~/.bitcoin/bitcoin.conf
-    vim ~/.bitcoin/bitcoin.conf
+    nano ~/.bitcoin/bitcoin.conf
 
 Insert the following lines into the bitcoin.conf, and replce with your username and password.
 
@@ -137,7 +137,7 @@ Install nginx and passenger
 
 Next, we need to update the Nginx configuration to point Passenger to the version of Ruby that we're using. You'll want to open up /etc/nginx/nginx.conf in your favorite editor,
 
-    sudo vim /etc/nginx/passenger.conf
+    sudo nano /etc/nginx/passenger.conf
 
 find the following lines, and uncomment them:
 
@@ -150,7 +150,7 @@ update the second line to read:
 
 we will alsp need to enable passenger in nginx config file
   
-    sudo vim /etc/nginx/nginx.conf 
+    sudo nano /etc/nginx/nginx.conf 
 
 and uncomment
 
@@ -176,9 +176,9 @@ A JavaScript Runtime is needed for Asset Pipeline to work. Any runtime will do b
 
 ##### Clone the Source
 
-    mkdir -p ~/peatio
-    git clone git://github.com/git37/peatio.git ~/peatio/current
+    mkdir -p ~/peatio/current
     cd peatio/current
+    git clone git://github.com/jebatech-crypto/peatio.git .
 
     ＃ Install dependency gems
     bundle install --without development test --path vendor/bundle
@@ -187,27 +187,45 @@ A JavaScript Runtime is needed for Asset Pipeline to work. Any runtime will do b
 
 **Prepare configure files**
 
+    chmod 755 bin/init_config
     bin/init_config
 
 **Setup Pusher**
 
 * Peatio depends on [Pusher](http://pusher.com). A development key/secret pair for development/test is provided in `config/application.yml` (uncomment to use). PLEASE USE IT IN DEVELOPMENT/TEST ENVIRONMENT ONLY!
 
-More details to visit [pusher official website](http://pusher.com)
+More details to visit [Pusher official website](http://pusher.com)
 
     # uncomment Pusher related settings
-    vim config/application.yml
+    nano config/application.yml
+
+    PUSHER_APP: YOUR_PUSHER_APP # change this get from your pusher application accout
+    PUSHER_KEY: YOUR_PUSHER_KEY # change this get from your pusher application accout
+    PUSHER_SECRET: YOUR_PUSHER_SECRET # change this get from your pusher application accout
+
+**Setup Gunmail**
+* Peatio-dex mailer depend on [Mailgun](https://www.mailgun.com/). A production need mailer setting for user use for validation progress
+
+    nano config/application.yml
+
+    SMTP_PORT: YOUR_SMTP_PORT # change this get from your mailgun application accout
+    SMTP_DOMAIN: YOUR_SMTP_DOMAIN # change this get from your mailgun application accout
+    SMTP_ADDRESS: YOUR_SMTP_ADDRESS # change this get from your mailgun application accout
+    SMTP_USERNAME: YOUR_SMTP_USERNAME # change this get from your mailgun application accout
+    SMTP_PASSWORD: YOUR_SMTP_PASSWORD # change this get from your mailgun application accout
+
+More detail to viti [Mailgun official website](https://www.mailgun.com/)
 
 **Setup bitcoind rpc endpoint**
 
     # replace username:password and port with the one you set in
     # username and password should only contain letters and numbers, do not use email as username
     # bitcoin.conf in previous step
-    vim config/currencies.yml
+    nano config/currencies.yml
 
 **Config database settings**
 
-    vim config/database.yml
+    nano config/database.yml
 
     # Initialize the database and load the seed data
     bundle exec rake db:setup
@@ -217,6 +235,12 @@ More details to visit [pusher official website](http://pusher.com)
     bundle exec rake assets:precompile
 
 **Run Daemons**
+
+    chmod 755 lib/*
+    chmod 755 lib/daemons/*
+
+    # rake list
+    bundle exec rake -T
 
     # start all daemons
     bundle exec rake daemons:start
@@ -251,4 +275,10 @@ For security reason, you must setup SSL Certificate for production environment, 
 
     # Add this rake task to your crontab so it runs regularly
     RAILS_ENV=production rake solvency:liability_proof
+
+    # Set Crontab
+    sudo crotab -e
+
+    # select 2 for use nano for easy
+    */2 * * * * cd /home/deploy/peatio && RAILS_ENV=production rake solvency:liability_proof 2>&1
 
