@@ -128,7 +128,7 @@ class Deposit < ActiveRecord::Base
 
   else 
     def do
-    account.lock!.plus_funds amount, reason: Account::DEPOSIT, ref: self
+      account.lock!.plus_funds amount, reason: Account::DEPOSIT, ref: self
   end
 
   end
