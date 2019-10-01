@@ -102,11 +102,14 @@ class Deposit < ActiveRecord::Base
   private
 
   def do
+    if Deposit
     account.lock!.plus_funds amount, reason: Account::DEPOSIT, ref: self
+    
+    else Staking
+    total_fee = self.staking_fee * amount
+    account.lock!.plus_funds amount, fee: total_fee, reason: Account::DEPOSIT, ref: self
 
       if self.staking
-        total_fee = self.staking_fee * amount
-        account.lock!.plus_funds amount, fee: total_fee, reason: Account::DEPOSIT, ref: self
         # Take staking fee and send some to admin account
         staking_fee_account = Account.find(Currency.find_by_code(self.currency).id)
         staking_fee_account.lock!.plus_funds total_fee * 0.75
